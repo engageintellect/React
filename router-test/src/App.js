@@ -1,27 +1,30 @@
-import './App.css';
-import Home from './Home';
-import About from './About';
-import Hello from './Hello';
+import "./App.css";
+
+import Nav from "./Components/Nav";
+import Footer from "./Components/Footer";
+import Home from "./Pages/Hello";
+import About from "./Pages/About";
+import Hello from "./Pages/Hello";
 
 // ----------------------------------------------
 // IMPORT ROUTER
 
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // ----------------------------------------------
 
 function App() {
-    return (
-        <Router>
-            <h1>Nav</h1>
-                <Routes>
-                    <Route path='/' element={<Home />} />
-                    <Route path='/about' element={<About />} />
-                    <Route path='/hello' element={<Hello />} />
-                </Routes>
-            <h1>Footer</h1>
-        </Router>
- );
+  return (
+    <Router>
+      <Nav />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/hello" element={<Hello />} />
+      </Routes>
+      <Footer />
+    </Router>
+  );
 }
 
 export default App;
